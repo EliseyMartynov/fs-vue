@@ -17,7 +17,7 @@
 };
 
 /** API entrypoint */
-export const API_URL = getEnvVar("REACT_APP_API_URL");
+export const API_URL = getEnvVar("VITE_APP_API_URL");
 
 /** Режим запуска программы */
 /** Режим разработки */

@@ -1081,6 +1081,11 @@ upath@^2.0.1:
   resolved "https://registry.yarnpkg.com/upath/-/upath-2.0.1.tgz#50c73dea68d6f6b990f51d279ce6081665d61a8b"
   integrity sha512-1uEe95xksV1O0CYKXo8vQvN1JEbtJp7lb7C5U9HMsIp6IVwntkH/oNUzyVNQSd4S1sYk2FpSSW44FqMc8qee5w==
 
+vite-plugin-environment@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/vite-plugin-environment/-/vite-plugin-environment-1.0.1.tgz#612d6e0cbc8de9e9d63883c54616c4923585e3ff"
+  integrity sha512-zosD4eipWFOLVG7DtcVKU/vCEXrAI/JzmoYihN/yR8DCBwXnL+zII0L18ko/kS7pLS0mUBlUzHa4e9sNbJu2sA==
+
 vite-tsconfig-paths@^3.3.17:
   version "3.3.17"
   resolved "https://registry.yarnpkg.com/vite-tsconfig-paths/-/vite-tsconfig-paths-3.3.17.tgz#b1421c4a01e6b446b78cc1dd12d45f302bc3a27b"

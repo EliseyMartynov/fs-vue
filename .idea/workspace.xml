@@ -2,29 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="81c8df51-4afb-4c05-8bd8-b9b51a88b318" name="Changes" comment="start router &amp; store">
-      <change afterPath="$PROJECT_DIR$/src/app/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/providers/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/providers/router.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/providers/store.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/entities/task/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/entities/task/model/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/entities/task/model/tasks.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/entities/task/ui/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/entities/task/ui/task-card/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/entities/task/ui/task-row/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/entities/task/ui/task-row/index.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/entities/task/ui/task-row/styles.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tasks-list/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tasks-list/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tasks-list/styles.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entities/task/ui/task-card/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/task/ui/task-card/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entities/task/ui/task-card/styles.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/task/ui/task-card/styles.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/env.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/env.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shared/config/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/config/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vite.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/vite.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn-error.log" beforeDir="false" afterPath="$PROJECT_DIR$/yarn-error.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -90,7 +77,8 @@
       <workItem from="1636194989515" duration="240000" />
       <workItem from="1636195473778" duration="5043000" />
       <workItem from="1636918901045" duration="6990000" />
-      <workItem from="1637002385353" duration="6160000" />
+      <workItem from="1637002385353" duration="6240000" />
+      <workItem from="1637176089011" duration="2883000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <created>1636194740595</created>
@@ -106,7 +94,14 @@
       <option name="project" value="LOCAL" />
       <updated>1636195788916</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="start router &amp; store">
+      <created>1637008766313</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1637008766313</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
