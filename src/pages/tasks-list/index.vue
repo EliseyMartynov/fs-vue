@@ -1,14 +1,15 @@
 <script setup lang="ts">
   import {Layout, LayoutContent, Row, Col, TypographyTitle, Spin, Empty} from 'ant-design-vue';
-  import {onMounted} from 'vue';
+  import {onMounted, computed} from 'vue';
   import {useStore} from 'vuex';
   import styles from './styles.module.scss';
 
   const store = useStore();
 
   const getTasksListAsync = () => store.dispatch('getTasksListAsync');
-
   onMounted(getTasksListAsync)
+
+  const isTasksListEmpty = computed(() => store.getters.isTasksListEmpty);
 </script>
 
 <template>
@@ -23,8 +24,8 @@
     </Layout>
     <LayoutContent :class="styles.content">
       <Row :gutter="[0, 20]" justify="center">
-        <Spin size="large" />
-        <Empty description="No tasks found" />
+        <Spin size="large" /> <!-- IF loading -->
+        <Empty v-if="isTasksListEmpty" description="No tasks found" />
 <!--        TasksList here -->
       </Row>
     </LayoutContent>
