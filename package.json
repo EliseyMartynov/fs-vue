@@ -9,6 +9,7 @@
   "dependencies": {
     "ant-design-vue": "^2.2.8",
     "axios": "^0.24.0",
+    "normalizr": "^3.6.1",
     "sass": "^1.43.4",
     "vue": "^3.2.16",
     "vue-router": "4",

@@ -1,11 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="81c8df51-4afb-4c05-8bd8-b9b51a88b318" name="Changes" comment="loading tasks data">
+    <list default="true" id="81c8df51-4afb-4c05-8bd8-b9b51a88b318" name="Changes" comment="WIP tasks model">
+      <change afterPath="$PROJECT_DIR$/src/entities/task/lib.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/features/task-filters/config.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/features/task-filters/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/features/task-filters/ui.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/features/toggle-task/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/features/toggle-task/ui.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/providers/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/providers/store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entities/task/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/task/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/entities/task/model/tasks.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/task/model/tasks.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entities/task/ui/task-row/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/task/ui/task-row/index.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tasks-list/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tasks-list/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +82,8 @@
       <workItem from="1636918901045" duration="6990000" />
       <workItem from="1637002385353" duration="6240000" />
       <workItem from="1637176089011" duration="3066000" />
-      <workItem from="1637264330475" duration="3194000" />
+      <workItem from="1637264330475" duration="3242000" />
+      <workItem from="1637339406156" duration="12160000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <created>1636194740595</created>
@@ -102,7 +113,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637179044803</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="WIP tasks model">
+      <created>1637267637860</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1637267637860</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -124,7 +142,8 @@
     <MESSAGE value="init commit" />
     <MESSAGE value="start router &amp; store" />
     <MESSAGE value="loading tasks data" />
-    <option name="LAST_COMMIT_MESSAGE" value="loading tasks data" />
+    <MESSAGE value="WIP tasks model" />
+    <option name="LAST_COMMIT_MESSAGE" value="WIP tasks model" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

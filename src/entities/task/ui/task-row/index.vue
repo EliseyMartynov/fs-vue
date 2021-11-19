@@ -9,15 +9,16 @@
   interface TaskRowProps {
     data: Task;
     titleHref?: string;
-    before?: any; // types (expect primitives) don't work anyways
   }
 
-  const {data, before, titleHref} = toRefs(defineProps<TaskRowProps>())
+  const props = defineProps<TaskRowProps>()
+
+  const {data, titleHref} = toRefs(props)
 </script>
 
 <template>
   <Row :class="[styles.root, { [styles.completed]: data?.completed }]">
-    {{before}}
+    <slot name="before" />
     <RouterLink v-if="titleHref" :to="titleHref">{{data?.title}}</RouterLink>
     <span v-else>{{data?.title}}</span>
   </Row>

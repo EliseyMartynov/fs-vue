@@ -1,12 +1,16 @@
 import {createStore} from 'vuex';
-import {tasksModule} from 'entities/task/model';
+import {taskModel} from 'entities/task';
 import {isDevEnv} from 'shared/config';
 
 export const store = createStore({
     strict: !!isDevEnv,
-    // it could be namespaced modules in a large project
-    // but since this is todo.. :)
+    // namespaced is cool thing for large projects
     modules: {
-        tasks: tasksModule
+        [taskModel.NAMESPACE]: {
+            // I think it's better to declare it in app layer
+            // while declare it inside modules still possible
+            namespaced: true,
+            ...taskModel.module
+        }
     }
 })
