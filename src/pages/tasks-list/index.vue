@@ -4,6 +4,7 @@
   import {useStore} from 'vuex';
 
   import {ToggleTask} from 'features/toggle-task';
+  import {TaskFilters} from 'features/task-filters';
   import {taskModel, TaskRow} from 'entities/task';
 
   import styles from './styles.module.scss';
@@ -25,7 +26,7 @@
         <TypographyTitle :level="1">Tasks list</TypographyTitle>
       </Row>
       <Row justify="center">
-<!--        TasksFilter feature-->
+        <TaskFilters />
       </Row>
     </Layout>
     <LayoutContent :class="styles.content">

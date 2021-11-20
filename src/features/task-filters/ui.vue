@@ -9,22 +9,22 @@
 
   const isListLoading = computed(() => store.state[taskModel.NAMESPACE].isListLoading);
   const onFilterClick = (id: number) => store.commit(
-      taskModel.mutations.setQueryConfig, getFilterById(id).config
+    taskModel.mutations.setQueryConfig, getFilterById(id).config
   )
 </script>
 
 <template>
   <RadioGroup :defaultValue="DEFAULT_FILTER"
               buttonStyle="solid"
-              v-for="{title, id} in filtersList"
-              :key="id"
   >
-    <RadioButton
-                 @click="() => onFilterClick(id)"
-                 :value="id"
-                 :disabled="isListLoading"
-    >
-      {{title}}
-    </RadioButton>
+    <template v-for="{title, id} in filtersList" :key="id">
+      <RadioButton
+                :value="id"
+                @click="onFilterClick(id)"
+                :disabled="isListLoading"
+      >
+        {{title}}
+      </RadioButton>
+    </template>
   </RadioGroup>
 </template>

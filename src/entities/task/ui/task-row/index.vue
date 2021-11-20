@@ -18,7 +18,9 @@
 
 <template>
   <Row :class="[styles.root, { [styles.completed]: data?.completed }]">
-    <slot name="before" />
+    <div :class="styles.marginBefore">
+      <slot name="before" />
+    </div>
     <RouterLink v-if="titleHref" :to="titleHref">{{data?.title}}</RouterLink>
     <span v-else>{{data?.title}}</span>
   </Row>

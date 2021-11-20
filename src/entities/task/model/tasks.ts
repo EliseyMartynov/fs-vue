@@ -3,8 +3,6 @@ import {normalize, schema} from 'normalizr';
 import {typicodeApi} from 'shared/api'
 import type { Task } from "shared/api";
 
-export const initialState: Record<string, any> = {};
-
 export const NAMESPACE = 'tasks';
 
 export type QueryConfig = {
@@ -13,12 +11,24 @@ export type QueryConfig = {
 };
 
 export const taskSchema = new schema.Entity(NAMESPACE);
-export const normalizeTasks = (data: Task[]) => normalize(data, [taskSchema])
+export const normalizeTask = (data: Task) => normalize(data, taskSchema);
+export const normalizeTasks = (data: Task[]) => normalize(data, [taskSchema]);
+
+// namespaced is cool thing for large projects
+// furthermore we hide this logic from Public API
+// and exporting ready-to-use actions/mutations/etc..
+// that don't depend on namespacing
+// our rest code should work both with namespaced true or false
+const IS_NAMESPACED = true; // so if we would turn it to false - everything will work the same :)
+
+export const initialState: Record<string, any> = {};
 
 export const module = {
+    namespaced: IS_NAMESPACED,
     state: {
         data: initialState,
         isListLoading: false,
+        isDetailsLoading: false,
         queryConfig: {}
     },
     getters: {
@@ -26,15 +36,22 @@ export const module = {
         filteredTasks: (state: any) => Object.values(state.data).filter((task: any) => (
             state.queryConfig.completed === undefined ||
                 task?.completed === state.queryConfig.completed
-        ))
+        )),
+        useTask: (state: any) => (taskId: any) => state.data[taskId]
     },
     mutations: {
         setTasksList: (state: any, response: any) => {
             // temprorary filtered because my laptop has 6gb...
-            state.data = normalizeTasks(response?.data.filter((_, i) => i < 20)).entities[NAMESPACE];
+            state.data = normalizeTasks(response?.data).entities[NAMESPACE];
         },
         setListLoading: (state: any, isLoading: any) => {
-            state.isListLoading = isLoading
+            state.isListLoading = isLoading;
+        },
+        setDetailsLoading: (state: any, isLoading: any) => {
+            state.isDetailsLoading = isLoading;
+        },
+        addTaskToList: (state: any, response: any) => {
+            state.data = {...state.date, ...normalizeTask(response?.data).entities[NAMESPACE]}
         },
         toggleTask: (state: any, taskId: any) => {
             const task = state.data[taskId];
@@ -55,22 +72,28 @@ export const module = {
             commit('setListLoading', false);
         },
         getTaskByIdAsync: async ({commit}: any, params: typicodeApi.tasks.GetTaskByIdParams) => {
-            await typicodeApi.tasks.getTaskById(params)
+            commit('setDetailsLoading', true);
+            commit('addTaskToList', await typicodeApi.tasks.getTaskById(params));
+            commit('setDetailsLoading', false);
         },
     }
 }
 
-// since our module namespaced it would be helpful
+// Remember? our rest code should work both with namespaced true or false
+const withPrefix = (name: string) => IS_NAMESPACED ? `${NAMESPACE}/${name}` : name
+
 export const actions = {
-    getTasksListAsync: `${NAMESPACE}/getTasksListAsync`
+    getTasksListAsync: withPrefix('getTasksListAsync'),
+    getTaskByIdAsync: withPrefix('getTaskByIdAsync')
 }
 
 export const mutations = {
-    toggleTask: `${NAMESPACE}/toggleTask`,
-    setQueryConfig: `${NAMESPACE}/setQueryConfig`
+    toggleTask: withPrefix('toggleTask'),
+    setQueryConfig: withPrefix('setQueryConfig')
 }
 
 export const getters = {
-    isTasksListEmpty: `${NAMESPACE}/isTasksListEmpty`,
-    filteredTasks: `${NAMESPACE}/filteredTasks`
+    isTasksListEmpty: withPrefix('isTasksListEmpty'),
+    filteredTasks: withPrefix('filteredTasks'),
+    useTask: withPrefix('useTask')
 }
