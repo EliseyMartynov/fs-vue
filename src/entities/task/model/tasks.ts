@@ -68,13 +68,19 @@ export const module = {
     actions: {
         getTasksListAsync: async ({commit}: any, params: typicodeApi.tasks.GetTasksListParams) => {
             commit('setListLoading', true);
-            commit('setTasksList', await typicodeApi.tasks.getTasksList(params));
-            commit('setListLoading', false);
+            try {
+                commit('setTasksList', await typicodeApi.tasks.getTasksList(params));
+            } finally {
+                commit('setListLoading', false);
+            }
         },
         getTaskByIdAsync: async ({commit}: any, params: typicodeApi.tasks.GetTaskByIdParams) => {
             commit('setDetailsLoading', true);
-            commit('addTaskToList', await typicodeApi.tasks.getTaskById(params));
-            commit('setDetailsLoading', false);
+            try {
+                commit('addTaskToList', await typicodeApi.tasks.getTaskById(params));
+            } finally {
+                commit('setDetailsLoading', false);
+            }
         },
     }
 }

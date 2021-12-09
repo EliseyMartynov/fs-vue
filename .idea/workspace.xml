@@ -1,20 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="81c8df51-4afb-4c05-8bd8-b9b51a88b318" name="Changes" comment="tasks list">
-      <change afterPath="$PROJECT_DIR$/src/pages/task-details/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/task-details/index.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/task-details/styles.module.scss" afterDir="false" />
+    <list default="true" id="81c8df51-4afb-4c05-8bd8-b9b51a88b318" name="Changes" comment="Done basic todo.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/providers/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/providers/store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/styles/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/index.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/styles/normalize.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/normalize.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/entities/task/model/tasks.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/task/model/tasks.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entities/task/ui/task-card/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/task/ui/task-card/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entities/task/ui/task-row/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/task/ui/task-row/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entities/task/ui/task-row/styles.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/task/ui/task-row/styles.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/task-filters/ui.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/task-filters/ui.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tasks-list/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tasks-list/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/task-details/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/task-details/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +80,8 @@
       <workItem from="1637176089011" duration="3066000" />
       <workItem from="1637264330475" duration="3242000" />
       <workItem from="1637339406156" duration="12218000" />
-      <workItem from="1637399320396" duration="8486000" />
+      <workItem from="1637399320396" duration="8536000" />
+      <workItem from="1639075731678" duration="7342000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <created>1636194740595</created>
@@ -127,7 +125,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637351837163</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Done basic todo.">
+      <created>1637407888114</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1637407888114</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -151,7 +156,8 @@
     <MESSAGE value="loading tasks data" />
     <MESSAGE value="WIP tasks model" />
     <MESSAGE value="tasks list" />
-    <option name="LAST_COMMIT_MESSAGE" value="tasks list" />
+    <MESSAGE value="Done basic todo." />
+    <option name="LAST_COMMIT_MESSAGE" value="Done basic todo." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

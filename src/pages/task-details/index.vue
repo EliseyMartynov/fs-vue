@@ -21,8 +21,6 @@ onMounted(getTaskById);
 
 const task = computed(() => store.getters[taskModel.getters.useTask](taskId));
 const isDetailsLoading = computed(() => store.state[taskModel.NAMESPACE].isDetailsLoading);
-// it's not rendering 404 somehow :/
-const isRenderNotFound = computed(() => !task.value && !isDetailsLoading.value);
 </script>
 
 <template>
@@ -31,9 +29,8 @@ const isRenderNotFound = computed(() => !task.value && !isDetailsLoading.value);
       <Result status="404"
               title="404"
               subTitle="Task was not found"
-              v-if="isRenderNotFound"
+              v-if="!task && !isDetailsLoading"
       >
-        <!--         v-if not working properly :/-->
         <template #extra>
           <RouterLink to="/"><Button>Back to tasks list</Button></RouterLink>
         </template>
@@ -46,9 +43,6 @@ const isRenderNotFound = computed(() => !task.value && !isDetailsLoading.value);
                 :bodyStyle="{height: 400}"
       >
         <template #actions>
-<!--          it's not rendering action if we will not place some div near it...-->
-<!--          e.g. <div>Actions</div>-->
-          123
           <ToggleTask :taskId="taskId" :withStatus="true" />
         </template>
         <template #extra>
