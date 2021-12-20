@@ -1,3 +1,9 @@
+# FS Vue
+
+This project is my translating of [original example](https://github.com/feature-sliced/examples/tree/master/todo-app) (React + Effector) to Vue 3 stack and made for [feature-sliced](https://feature-sliced.design/) frontend methodology. Vite's default template description is below 👇
+
+<hr>
+
 # Vue 3 + Typescript + Vite
 
 This template should help get you started developing with Vue 3 and Typescript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
