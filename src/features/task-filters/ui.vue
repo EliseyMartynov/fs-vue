@@ -4,14 +4,15 @@
   import {useStore} from 'vuex';
   import {taskModel} from 'entities/task';
   import {filtersList, getFilterById, DEFAULT_FILTER} from './config'
+  import type { RadioChangeEvent } from 'ant-design-vue/lib/radio';
 
   const store = useStore();
 
   const filtersGroupModel = ref<number>(DEFAULT_FILTER);
 
   const isListLoading = computed(() => store.state[taskModel.NAMESPACE].isListLoading);
-  const onFilterClick = (e) => {
-    const id = e.target.value;
+  const onFilterClick = (e: RadioChangeEvent) => {
+    const id = Number(e.target?.value);
     store.commit(
       taskModel.mutations.setQueryConfig, getFilterById(id).config
     )

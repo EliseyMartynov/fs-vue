@@ -8,6 +8,7 @@
   interface TaskCardProps {
     data?: Task; // types don't work :\
     titleHref: string;
+    loading: boolean;
   }
 
   const props = defineProps<TaskCardProps>();

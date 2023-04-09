@@ -10,7 +10,7 @@ import {TaskCard, taskModel} from 'entities/task';
 import styles from './styles.module.scss';
 
 const route = useRoute();
-const taskId = route.params.id;
+const taskId = Number(route.params.id);
 
 const store = useStore();
 
@@ -36,6 +36,7 @@ const isDetailsLoading = computed(() => store.state[taskModel.NAMESPACE].isDetai
         </template>
       </Result>
       <TaskCard v-else
+                title-href=""
                 :data="task"
                 size="default"
                 :loading="isDetailsLoading"
